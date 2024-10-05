@@ -1,1 +1,1 @@
-# Java Operator Mastery: Logical Operators Explained Bangla Tutorial
+# Java Operator Mastery: Logical Operators Explained

@@ -1,4 +1,4 @@
-public class assignment_op {
+public class assignment_operator {
     public static void main(String[] args){
   //lecture of assignment operators     
 int number=56;

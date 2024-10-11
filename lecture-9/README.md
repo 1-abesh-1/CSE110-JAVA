@@ -1,1 +1,1 @@
-# Mastering Java Loops: While Loop Explained
+# Mastering Java Loops: While/for Loop Explained

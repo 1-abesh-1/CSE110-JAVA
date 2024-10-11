@@ -10,5 +10,5 @@
 6. Mastering User Input in Java: Scanner Class Explained
 7. lecture on java errors
 8. Mastering Java Control Flow: If, Else, and Else If Statements Basics
-9. Mastering Java Loops: While Loop Explained
-10. Mastering Java Loops: for Loop Explained
+9. Mastering Java Loops: While/for Loop Explained
+

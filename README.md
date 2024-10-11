@@ -11,3 +11,4 @@
 7. lecture on java errors
 8. Mastering Java Control Flow: If, Else, and Else If Statements Basics
 9. Mastering Java Loops: While Loop Explained
+10. Mastering Java Loops: for Loop Explained

@@ -1,0 +1,204 @@
+//TASK-10
+
+
+hungry; //valid
+2AB; // 2AB is invalid as identifier cause it starts with number
+312.2; //312.2 is invalid as identifier cause it contains 
+MOBILE; //valid
+“Ans”; //"Ans" contains special charecter
+$30;//valid
+Yes/No; //invalid
+student-id; //invalid
+A+3; //invalid
+‘X’; //invalid 
+ return //invalid 
+
+
+
+
+//TASK-11   _2.1
+
+public class task_11{
+    public static void main(String[] args){
+int number=1234;
+System.out.println(number)
+;
+}
+
+    }
+
+
+
+
+
+//TASK-11   _2.2
+public class task_11{
+    public static void main(String[] args){
+
+        int num1=24201059;
+        int num2=14639;
+      
+        System.out.println(  num1 +num2);
+        
+
+}
+
+    }
+
+
+//TASK-11 _2.3
+public class task_11{
+    public static void main(String[] args){
+
+        int num1=200;
+        int num2=100;
+        
+        System.out.println(num1*num2);
+        System.out.println(num1/num2);
+
+}
+
+    }
+
+
+//TASK-11 _2.4
+public class task_11{
+    public static void main(String[] args){
+
+        double num_1=24201059;
+        double num_2=146.39;
+       
+
+
+
+        System.out.println(num_1);
+        System.out.println(num_1+num_2);
+
+        System.out.println(num_1*num_2);
+        System.out.println(num_1/num_2);
+        
+}
+
+    }
+
+
+
+
+
+    //TASK-11 _2.5
+public class task_11{
+    public static void main(String[] args){
+
+        int num_1=24201059;
+        double num_2=146.39;
+       
+
+
+
+        System.out.println(num_1);
+        System.out.println(num_1+num_2);
+
+        System.out.println(num_1*num_2);
+        System.out.println(num_1/num_2);
+        
+}
+
+    }
+
+
+
+
+//TASK-11 _2.6
+public class task_11{
+    public static void main(String[] args){
+
+        String st1="hello ";
+        String st2="world";
+        String sum_of_st=st1+st2;
+        
+
+        System.out.println(st1);
+        System.out.println(st1+st2);
+
+
+
+
+        String string="hello world ";
+        int number=449;
+
+       System.out.println(string+number);
+       
+        
+}
+
+    }
+
+
+
+
+
+
+
+    
+//TASK-12
+public class task_12{
+    public static void main(String[] args){
+
+int r=4;
+
+
+
+System.out.println(2*Math.PI*r);
+
+System.out.println(Math.PI*radius*r);
+
+
+
+        
+}
+
+    }
+
+
+//TASK-13
+public class task_13{
+    public static void main(String[] args){
+
+int n=24201059;
+
+       System.out.println(n%100); 
+}
+
+    }
+
+
+//TASK-14
+public class task_14{
+    public static void main(String[] args){
+
+double i=242;
+       System.out.println(i * 0.0254); 
+}
+
+    }
+
+
+
+
+//TASK-15 _a
+public class task_14{
+    public static void main(String[] args){
+int a=10;
+int b=11;
+int c=a;
+a=b;
+b=c;
+
+
+    }
+    }
+
+
+
+
+

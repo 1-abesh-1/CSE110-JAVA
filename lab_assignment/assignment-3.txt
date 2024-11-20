@@ -1,0 +1,106 @@
+//task-1
+
+public class Main{
+  public static void main(String[]args){
+    int a=18;
+    int l_value=63;
+    while(a<=l_value){
+      if(a==l_value){
+      System.out.print(a);
+    }else{
+       System.out.print(a + ",");
+      }
+    
+    a=a+9;
+    }
+  }
+}
+
+
+//task-2
+
+public class Main{
+  public static void main(String[]args){
+    int a=18;
+    int l_value=63;
+    while(a<=l_value){
+      if(a==l_value){
+           if(a%2==0){
+            System.out.print(a);
+        }
+        else{
+            System.out.print(-1*a);
+        }
+     
+    }else{
+        if(a%2==0){
+            System.out.print(a + ",");
+        }
+        else{
+            System.out.print(-1*a + ",");
+        }
+        
+        
+       
+      }
+    
+    a=a+9;
+    }
+  }
+}
+
+
+
+//task-3
+
+public class Main{
+  public static void main(String[]args){
+    int a=0;
+    int l_value=600;
+    int sum=0;
+    while(a<=l_value){
+     if(a%7==0 && a%9==0){
+         sum=sum+a;
+     }
+     a=a+1;
+    }
+    System.out.println(sum);
+  }
+}
+
+//task-4
+public class Main{
+  public static void main(String[]args){
+    int a=0;
+    int l_value=600;
+    int sum=0;
+    while(a<=l_value){
+     if(a%7==0 && a%9==0){
+         sum=sum+a;
+     }
+     a=a+1;
+    }
+    System.out.println(sum);
+  }
+}
+
+//task-5
+public class Main{
+  public static void main(String[]args){
+    int a=0;
+    int l_value=600;
+    int sum=0;
+    while(a<=l_value){
+     if(a%7==0 || a%9==0){
+         sum=sum+a;
+     }
+     a=a+1;
+    }
+    System.out.println(sum);
+  }
+}
+
+//task-6
+
+
+

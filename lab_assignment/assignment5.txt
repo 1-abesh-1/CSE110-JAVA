@@ -220,4 +220,81 @@ System.out.println(rev_word_string);
 }
 
 
-//task-7
+//task --7
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        
+        
+        System.out.print("Enter the 1st string : ");
+        String in_1 = scanner.nextLine();
+        
+        System.out.print("Enter the 2nd string : ");
+        String in_2 = scanner.nextLine();
+        
+    
+        String result = "";
+        
+        
+        for (int i = 0; i < in_1.length(); i++) {
+            char c = in_1.charAt(i);
+            boolean Common = false;
+            
+            
+            for (int j = 0; j < in_2.length(); j++) {
+                if (c == in_2.charAt(j)) {
+                    Common = true;
+                    break;
+                }
+            }
+            
+    
+            if (!Common) {
+                result += c;
+            }
+        }
+        
+
+        for (int i = 0; i < in_2.length(); i++) {
+            char c = in_2.charAt(i);
+            boolean Common = false;
+            
+            for (int j = 0; j < in_1.length(); j++) {
+                if (c == in_1.charAt(j)) {
+                    Common = true;
+                    break;
+                }
+            }
+            
+    
+            if (!Common) {
+                result += c;
+            }
+        }
+        
+        String uppercaseResult = "";
+        for (int i = 0; i < result.length(); i++) {
+            char c = result.charAt(i);
+        
+            if (c >= 'a' && c <= 'z') {
+                c = (char) (c - 32);
+            }
+            uppercaseResult += c;
+        }
+
+
+        System.out.println(uppercaseResult);
+        
+        
+
+    }
+}
+
+//task --8
+
+

@@ -1,0 +1,223 @@
+//task--1
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+       Scanner input = new Scanner(System.in);
+
+        System.out.println("give a string");
+        System.out.print(" >>>");
+String in=input.nextLine();
+
+for(int i=0;i<in.length();i++){
+ 
+char letter=in.charAt(i);
+
+if(letter>='a' && letter<='z'){
+System.out.print((char)(letter-32));
+}else{
+
+  System.out.print(letter);
+}
+
+
+
+}
+
+
+
+      
+    }
+}
+
+
+//task --2
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("give a word to check if it's palindrome");
+        System.out.print(">>>");
+String in=input.nextLine();
+Boolean isPal=true;
+int n=0;
+int i=in.length()-1;
+
+while(n<i){
+if(in.charAt(i)==in.charAt(n)){
+isPal=true;
+
+}else{
+
+  isPal=false;
+}
+
+
+  n++;
+  i--;
+}
+
+
+
+System.out.println(isPal);
+
+
+}
+}
+
+
+
+//task --3
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("give a sentence");
+        System.out.print(">>>");
+String in=input.nextLine();
+System.out.println("give a sign");
+System.out.print(">>>");
+char sign=input.next().charAt(0);
+
+for(int i=0;i<in.length();i++){
+if(in.charAt(i)==sign){
+System.out.println();
+}else{
+  System.out.print(in.charAt(i));
+}
+}
+
+}
+}
+
+
+//task --4
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("give a input");
+        System.out.print(">>>");
+String in=input.nextLine();
+
+for(int i=in.length()-1;0<=i;i--){
+  System.out.print(in.charAt(i));
+}
+
+
+}
+}
+
+
+//task --5
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("give a phrase");
+        System.out.print(">>>");
+String in=input.nextLine();
+int vowel_count=0;
+int cons_count=0;
+String vowel="aeiouAEIOU";
+for(int i=0;i<in.length();i++){
+  if(in.charAt(i)=='a' || in.charAt(i)=='e' || in.charAt(i)=='i' || in.charAt(i)=='o' || in.charAt(i)=='u'){
+    vowel_count=vowel_count+1;
+        }else if(in.charAt(i)=='A' || in.charAt(i)=='E' || in.charAt(i)=='I' || in.charAt(i)=='O' || in.charAt(i)=='U'){
+          vowel_count=vowel_count+1;
+        }else{
+          cons_count=cons_count+1;
+        }
+
+
+}
+
+
+
+if(vowel_count%3==0 && cons_count%5==0){
+System.out.println("Aaarr! Me Plunder!!");
+}else{
+  System.out.println("Blimey! No Plunder!!");
+}
+
+
+
+
+}
+}
+
+
+//task --6
+
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("give a phrase");
+        System.out.print(">>>");
+String in=input.nextLine();
+String rev_word_string="";
+String parString ="";
+
+for(int i=in.length()-1;i>=0;i--){
+
+
+if(in.charAt(i)==' ' ){ 
+
+  for(int n=parString.length()-1;n>=0;n--){
+rev_word_string=rev_word_string+parString.charAt(n);
+
+  }
+  rev_word_string=rev_word_string+' ';
+  parString="";
+  
+}else{
+parString=parString+in.charAt(i);
+}
+
+
+
+
+}
+
+
+if (parString!="") {
+  for (int n = parString.length() - 1; n >= 0; n--) {
+      rev_word_string = rev_word_string + parString.charAt(n);
+  }
+}
+
+
+
+
+
+System.out.println(rev_word_string);
+
+}
+}
+
+
+//task-7

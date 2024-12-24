@@ -1,1 +1,37 @@
 //task---1
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner in=new Scanner(System.in);
+        System.out.print("N: ");
+      int N=in.nextInt();
+      int []arr=new int[N];
+      for(int i=0; i<N;i++){
+          System.out.print("Enter a number: ");
+          int a=in.nextInt();
+          arr[i]=a;
+      }
+      
+      int []arr1=new int[arr.length+1];
+      for(int i=0; i<arr.length;i++){
+         arr1[i]=arr[i];
+      }
+      System.out.print("Enter another number: ");
+
+      arr1[arr1.length-1]=in.nextInt();
+      
+      for(int i=0; i<arr1.length;i++){
+          System.out.print( arr1[i]+" ");
+      }
+      
+      
+      
+      
+      
+      
+      
+    }
+}
+
+
+//task---2

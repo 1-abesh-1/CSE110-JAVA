@@ -35,3 +35,103 @@ class Main {
 
 
 //task---2
+
+class Main {
+    public static void main(String[] args) {
+        int arr [] = {9, -5, 7, 9, -5, 5, 7};
+        
+       for(int i=0;i<arr.length;i++){
+           for(int n=i+1;n<arr.length;n++){
+               if(arr[i]==arr[n]){
+                   arr[n]=0;
+                   break;
+               }
+           }
+       }
+        
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+        
+    }
+}
+
+
+//task---3(A)
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.print("Enter the length of the array:");
+        int len= sc.nextInt();
+        int [] arr= new int[len];
+        int n=-1;
+        
+        
+        
+        for(int i=0;i<len;i++){
+            System.out.print("Enter a number:");
+            int a=sc.nextInt();
+            arr[i]=a;
+        }
+        
+        int [] arr1=new int[len];
+        for(int i=arr.length-1;i>=0;i--){
+            n=n+1;
+            while(arr.length>n){
+                arr1[n]=arr[i];
+                break;
+            }
+            
+        }
+        
+        for(int i=0;i< arr1.length;i++){
+            System.out.print(arr1[i]+" ");
+        }
+    }
+}
+
+//task-3(B)
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+       Scanner sc=new Scanner(System.in);
+       System.out.print("Enter the length of the array:");
+        int len= sc.nextInt();
+        int [] arr= new int[len];
+        int i=0;
+        int n=arr.length-1;
+        
+        
+        
+        for(int a=0;a<len;a++){
+            System.out.print("Enter a number:");
+            int b=sc.nextInt();
+            arr[a]=b;
+        }
+        
+      while(i<n){
+          int temp=arr[i];
+          arr[i]=arr[n];
+          arr[n]=temp;
+          i++;
+          n--;
+      }
+       
+       
+       
+       
+       
+        
+        for(int a=0;a< arr.length;a++){
+            System.out.print(arr[a]+" ");
+        }
+    }
+}
+
+
+
+
+
+
+

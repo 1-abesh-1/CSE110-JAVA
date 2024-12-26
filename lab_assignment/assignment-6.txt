@@ -169,8 +169,147 @@ class Main {
     }
 }
 
+//task---5
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+         Scanner in=new Scanner(System.in);
+        System.out.print("N: ");
+      int N=in.nextInt();
+      int []arr=new int[N];
+      boolean flag=false;
+      for(int i=0; i<N;i++){
+          System.out.print("Enter a number: ");
+          int a=in.nextInt();
+          arr[i]=a;
+      }
+      
+      System.out.print("Enter a number: ");
+      int b=in.nextInt();
+      
+      for(int i=0; i<N;i++){
+         
+         if(arr[i]==b){
+             System.out.print(arr[i]+" is at index "+i);
+             flag=true;
+         }else{
+          
+              flag=false;
+         }
+      }
+      if(!flag){
+              System.out.print("Element not found");
+      }
+      
+      
+    }
+}
 
+//task---6 
 
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+         Scanner in=new Scanner(System.in);
+        System.out.print("Enter the length of the array: ");
+      int N=in.nextInt();
+      double []arr=new double[N];
+     
+     double max=0;
+     double min=arr[0];
+     double sum=0;
+     
+     for(int i=0; i<N;i++){
+          System.out.print("Enter a number: ");
+          double a=in.nextDouble();
+          arr[i]=a;
+      }
+     
+     
+     
+     
+     for(int i=0;i<arr.length;i++){
+        sum=sum+arr[i] ;
+        
+        if(arr[i]>max){
+            max=arr[i];
+        }else if(arr[i]<min){
+            min=arr[i];
+        }
+     }
+      
+      double avg=sum/arr.length;
+      
+      for(int i=0;i<arr.length;i++){
+          if(max==arr[i]){
+              System.out.println("Maximum element "+max+" found at index "+i);
+          }else if(min==arr[i]){
+              System.out.println("Minimum element "+min+" found at index "+i);
+          }
+          
+      }
+      System.out.println("Summation: " +sum);
+        System.out.println("Average:  " +(float)avg);
+      
+      
+      
+      
+    }
+}
 
+//task---7
 
+class Main {
+    public static void main(String[] args) {
+       int [] arr={-5,10,-7,-5};
+       int len=0;
+       int count=0;
+       int l=0;
+        
+       System.out.println("Input array:");
+       for(int i=0;i<arr.length;i++){
+           System.out.print(arr[i]+" ");
+       }
+       
+       System.out.println();
+       
+       for(int i=0;i<arr.length;i++){
+           for(int n=i+1;n<arr.length;n++){
+            if(arr[i]==arr[n]) {
+                count=count+1;
+            }  
+           }
+       }
+       
+       
+       len=arr.length-count;
+       
+       int []arr1=new int[len];
+        for(int i=0;i<arr.length;i++){
+            boolean flag=true;
+           for(int n=i+1;n<arr.length;n++){
+            if(arr[i]==arr[n]) {
+                flag=false;
+                break;
+            }  
+           }
+           
+           if(flag){
+               arr1[l]=arr[i];
+               l++;
+           }
+           
+           
+       }
+       
+       
+         System.out.println("New array:");
+       for(int i=0;i<arr1.length;i++){
+           System.out.print(arr1[i]+" ");
+       }
+       
+    }
+}
+
+//task---8
 

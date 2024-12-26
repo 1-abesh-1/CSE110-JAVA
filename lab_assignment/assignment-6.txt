@@ -313,3 +313,52 @@ class Main {
 
 //task---8
 
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        
+        boolean flag=true;
+        Scanner in=new Scanner(System.in);
+        System.out.print("Please enter the length of array 1:");
+      int N=in.nextInt();
+      int []arr=new int[N];
+      System.out.println("Please enter the elements of the arr1:");
+      for(int i=0; i<N;i++){
+          
+          int a=in.nextInt();
+          arr[i]=a;
+      }
+      
+       System.out.print("Please enter the length of array 2:");
+      int M=in.nextInt();
+      int []arr1=new int[M];
+       System.out.println("Please enter the elements of the arr2:");
+      for(int i=0; i<M;i++){
+         
+          int a=in.nextInt();
+          arr1[i]=a;
+      }
+      
+      for(int i=0;i<arr1.length;i++){
+          boolean inner=false;
+          for(int n=0;n<arr.length;n++){
+          if(arr1[i]==arr[n]){
+              inner=true;
+              break;
+          }
+      }
+      
+      if(!inner){
+          flag=false;
+      }
+      }
+      
+      if(flag){
+          System.out.print("Array 2 is a subset of Array 1.");
+      }else{
+           System.out.print("Array 2 is not a subset of Array 1.");
+      }
+      
+      
+    }
+}

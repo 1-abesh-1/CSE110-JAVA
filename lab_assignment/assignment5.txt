@@ -1,3 +1,4 @@
+
 //task--1
 import java.util.Scanner;
 
@@ -360,8 +361,57 @@ result=result+sentence.charAt(i);
 }
 
 
-//task-9
+//task --9
 
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+    
+        Scanner scanner = new Scanner(System.in);
+        
+
+        System.out.print("Enter a password: ");
+        String container= scanner.nextLine();
+        
+        boolean strong = false;
+        boolean len=true;
+        boolean up = false;
+        boolean low = false;
+        boolean special = false;
+        boolean dig=false;
+        
+if(container.length()<8){
+len=false;
+}
+
+
+for(int i=0;i<container.length();i++){
+    char ch=container.charAt(i);
+if('A'<=ch && 'Z'>=ch){
+    up=true;
+}else if('a'<=ch && 'z'>=ch){
+ low=true;
+}else if('0'<=ch && '9'>=ch){
+dig=true;
+}else if(!(ch >= 'A' && ch <= 'Z') && !(ch >= 'a' && ch <= 'z') && !(ch >= '0' && ch <= '9') && ch != ' '){
+special=true;
+}
+}
+
+
+if(len && up && low && special && dig){
+
+    strong=true;
+
+}
+
+System.out.println(strong);
+
+
+}
+}
 
 
 

@@ -239,7 +239,7 @@ class Main {
      }
       
       double avg=sum/arr.length;
-      
+       
       for(int i=0;i<arr.length;i++){
           if(max==arr[i]){
               System.out.println("Maximum element "+max+" found at index "+i);
@@ -360,5 +360,103 @@ class Main {
       }
       
       
+    }
+}
+
+
+//task---9
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+         Scanner in=new Scanner(System.in);
+        System.out.print("N: ");
+      int N=in.nextInt();
+      int []arr=new int[N];
+     
+     
+     
+     
+     for(int i=0; i<N;i++){
+          System.out.print("Enter a number: ");
+          int a=in.nextInt();
+          arr[i]=a;
+      }
+      System.out.println("Original Array:");
+       for(int a=0;a< arr.length;a++){
+            System.out.print(arr[a]+" ");
+        }
+      System.out.println();
+      
+            for (int i = 0; i < arr.length; i++) {
+         
+            int maxId = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] > arr[maxId]) {
+                    maxId = j;
+                }
+            }
+
+            int temp = arr[i];
+            arr[i] = arr[maxId];
+            arr[maxId] = temp;
+        }
+    
+     
+      System.out.println("Sorted Array: ");
+     
+     
+      for(int a=0;a< arr.length;a++){
+            System.out.print(arr[a]+" ");
+        }
+     
+     
+    }
+}
+
+
+//task---9
+
+
+class Main {
+    public static void main(String[] args) {
+       int [] marks = {85, 90, 75, 44, 99};
+String [] names = {"Bob", "Alice", "Max", "Marry", "Rosy"};
+
+
+
+
+ for (int i = 0; i < marks.length - 1; i++) {
+      
+            for (int j = 0; j < marks.length - i - 1; j++) {
+                
+                if (marks[j] > marks[j + 1]) {
+                  
+                    int temp = marks[j];
+                 marks[j] = marks[j + 1];
+                    marks[j + 1] = temp;
+                    
+                    String b = names[j];
+                    names[j] = names[j + 1];
+                    names[j + 1] = b;
+                }
+            }
+        }
+        
+        for(int a=0;a< marks.length;a++){
+            System.out.print(marks[a]+" ");
+        }
+     
+        System.out.println();
+        
+         for(int a=0;a< names.length;a++){
+            System.out.print(names[a]+" ");
+        }
+     
+
+
+
+
+
     }
 }

@@ -1,1 +1,74 @@
-//hello
+//task---1
+class Main {
+    public static void main(String[] args) {
+     evenChecker(10);//----A
+        boolean result = isEven(10);//----B
+System.out.println( result );
+boolean result1 = isPos(-5);//------C
+System.out.println( result1 );
+
+sequence(-7);//----D
+    }
+    
+    
+    //-----A
+    public static void evenChecker(int a){
+        if(a%2==0){
+            System.out.println("Even!!");
+        }else{
+            System.out.println("Odd!!");
+  
+        }
+    }
+    
+    
+    //------B
+     public static boolean isEven(int a){
+       if(a%2==0){
+            return true;
+        }else{
+            
+           return false;
+        }
+    }
+    
+    //-------C
+     public static boolean  isPos(int a){
+       if(a>0){
+            return true;
+        }else{
+            
+           return false;
+        }
+    }
+    
+    //-------D
+    public static void  sequence(int a){
+       if(isPos(a)){
+            int i=0;
+            while(i<=a){
+                if(isEven(i)){
+                    System.out.print(i+" ");
+                }
+                i++;
+            }
+        }else{
+            int i=0;
+            while(i>=a){
+                if(isEven(a)==false){
+                    System.out.print(a+" ");
+                }
+                a++;
+            }
+        }
+    }
+    
+    
+}
+
+
+
+
+
+//Task----2
+

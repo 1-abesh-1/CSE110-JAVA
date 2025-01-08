@@ -71,19 +71,266 @@ sequence(-7);//----D
 
 
 //Task----2
+
 class Main {
     public static void main(String[] args) {
        double area = circleArea(5);
    System.out.println(area);
-
+   double volume = sphereVolume(5);
+System.out.println(volume);
+findSpace(10,"circle"); 
+findSpace(5,"sphere");
     }
        public static double circleArea(int r) {
-       double area=3.1416*r*r;
+       double area=Math.PI*r*r;
        return area;//----A
     }
     
      public static double sphereVolume(int r) {
-       double volume=3.1416*r*r;
-       return volume;//----B
+      return (4.0 / 3.0) * Math.PI * Math.pow(r, 3);//----B
     }
+     public static void findSpace(int r, String a) {//----C
+     String c="circle";
+     String s="sphere";
+     boolean C=false;
+     boolean S=false;
+     
+     int i=0;
+      int n=0;
+     while(i<s.length()){
+         if(s.charAt(i)==a.charAt(i)){
+             S=true;
+             i++;
+         }else{
+             S=false;
+             i=s.length();
+         }
+     }
+     
+     while(n<c.length()){
+         if(c.charAt(n)==a.charAt(n)){
+             C=true;
+             n++;
+         }else{
+             C=false;
+             n=c.length();
+         }
+     }
+     
+     if(C){
+         System.out.println(circleArea(r/2));
+     }else if(S){
+      System.out.println(sphereVolume(r/2));
+    }else{
+        System.out.println("Wrong Parameter");
+    }
+    
+     }
 }
+//Task---3
+
+class Main {
+    public static void main(String[] args) {
+    boolean res = isTriangle(7,5,10);
+System.out.println( res );
+triArea(7,5,10);
+
+
+
+
+    }
+    
+    
+    //----A
+       public static boolean isTriangle(int a,int b, int c) {
+      boolean t=false;
+      
+      if(a+b>c && b+c>a && a+c>b){
+          t=true;
+      }
+      return t;
+    }
+    
+    //----B
+     public static void triArea(int a,int b, int c) {
+       double s=  (a + b + c)/2;
+       double area=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+      if(isTriangle(a,b,c)){
+          System.out.println( area );
+      }else{
+          System.out.println( "Can't form triangle");
+      }
+    }
+    
+    
+    
+
+}
+
+//Task---4
+
+class Main {
+    public static void main(String[] args) {
+   boolean check = isPrime(7);
+System.out.println(check);
+boolean check1 = isPerfect(6);
+System.out.println(check1);
+int result = special_sum(8);
+System.out.println(result);
+
+
+
+
+
+
+    }
+    
+    
+    //----A
+       public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false; 
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false; 
+            }
+        }
+        return true; 
+    }
+    
+    //-----B
+     public static boolean isPerfect(int num) {
+        if (num <= 0) {
+            return false; 
+        }
+
+        int sumOfDivisors = 0;
+
+        
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sumOfDivisors += i;
+            }
+        }
+
+
+        return sumOfDivisors == num;
+    }
+    
+    
+    
+    //-------C
+    public static int special_sum(int n) {
+        int sum = 0;
+
+        
+        for (int i = 1; i <= n; i++) {
+            if (isPrime(i) || isPerfect(i)) {
+                sum += i; 
+            }
+        }
+
+        return sum;
+    }
+    
+    
+    
+
+}
+
+//Task----5
+class Main {
+    public static void main(String[] args) {
+  showDots(3);
+  show_palindrome(6);
+
+
+    }
+    //------A
+     public static void showDots(int number) {
+        for (int i = 0; i < number; i++) {
+            System.out.print("."); 
+        }
+        System.out.println(); 
+    }
+    
+    
+    
+    //------B
+    public static void show_palindrome(int number) {
+       
+       for(int i=1;i<=number;i++){
+           System.out.print(i);
+       }
+       for(int i=number-1;i>0;i--){
+           System.out.print(i);
+       }
+       
+       
+    }
+    
+    
+}
+
+//Task----6
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+ double t = calcTax(16,20000);
+System.out.println(t);
+
+calcYearlyTax();
+
+
+    }
+    //------A
+    public static double calcTax(int age, double salary) {
+        double tax = 0;
+
+      
+        if (age < 18 || salary < 10000) {
+            tax = 0;
+        } 
+       
+        else if (salary >= 10000 && salary <= 20000) {
+            tax = salary * 0.07;
+        }
+        
+        else if (salary > 20000) {
+            tax = salary * 0.14;
+        }
+
+        return tax;  
+    }
+    
+    //------B
+    public static void calcYearlyTax() {
+        Scanner scanner = new Scanner(System.in);
+
+       
+       
+        int age = scanner.nextInt();
+
+        double totalTax = 0;
+
+        for (int month = 1; month <= 12; month++) {
+           
+            double monthlyIncome = scanner.nextDouble();
+
+            double monthlyTax = calcTax(age, monthlyIncome);
+
+            System.out.println("Month" + month + " tax: " + monthlyTax);
+
+            totalTax += monthlyTax;
+        }
+
+        System.out.println("Total yearly tax: " + totalTax);
+    }
+    
+    
+}
+
+

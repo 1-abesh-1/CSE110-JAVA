@@ -333,4 +333,58 @@ calcYearlyTax();
     
 }
 
+//Task---7
+
+import java.util.Scanner;
+
+class Main {
+      public static void main(String[] args) {
+ Scanner sc= new Scanner(System.in);
+System.out.print("N=");
+int N=sc.nextInt();
+oneToN(1,N);
+System.out.println();
+    nToOne(1,N);
+    System.out.println();
+    System.out.println(recursiveSum(1,N));
+
+    }
+  //----A
+    
+public static void oneToN(int a, int N) {
+       
+        if (N < a) {
+            return;
+        }
+ System.out.print(a+" ");
+        oneToN(a+ 1,N);
+
+        
+       
+    }
+    //----B
+     public static void nToOne(int a, int N) {
+       
+        if (N < a) {
+            return;
+        }
+
+        System.out.print(N+" ");
+
+      
+        nToOne(a,N-1);
+    }
+    
+    //-----C
+    public static int recursiveSum(int current, int N) {
+        
+        if (current > N) {
+            return 0;
+        }
+
+       
+        return current + recursiveSum(current + 1, N);
+    }
+}
+
 

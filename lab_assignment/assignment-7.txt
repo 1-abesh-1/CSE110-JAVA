@@ -71,4 +71,19 @@ sequence(-7);//----D
 
 
 //Task----2
+class Main {
+    public static void main(String[] args) {
+       double area = circleArea(5);
+   System.out.println(area);
 
+    }
+       public static double circleArea(int r) {
+       double area=3.1416*r*r;
+       return area;//----A
+    }
+    
+     public static double sphereVolume(int r) {
+       double volume=3.1416*r*r;
+       return volume;//----B
+    }
+}

@@ -186,3 +186,35 @@ System.out.print(toHex(dec));
 
 //Task-7
 
+
+
+ class Main{
+    public static void main(String[]args){
+int arr[] = {6, 13, 28, 17, 3, 9, 11, 23, 10, 29, 12, 7};
+for(int n=0;n<arr.length;n++){
+    int number=arr[n];
+    boolean flag=true;
+    if (number <= 1) {
+            flag= false;
+        }
+
+        
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                flag= false;  
+            }
+        }
+        if(flag){
+        System.out.println(n+": "+number);
+        }
+        
+}
+
+
+
+
+    }
+   
+
+}
+

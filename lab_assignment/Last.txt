@@ -134,3 +134,55 @@ System.out.print(isHappyNumber(82));
 
 //Task-5
 
+ class Main{
+    public static void main(String[]args){
+int dec= toDec("1010");
+System.out.print(toHex(dec));
+    }
+    
+    
+    public static int toDec(String i){
+        int [] value={1,2 ,4,8,16,32,64,128};
+        String r="";
+        int sum=0;
+        for (int n=i.length()-1;0<=n;n--){
+            r=r+i.charAt(n);
+        }
+        for(int n=0;n<r.length();n++){
+            if(r.charAt(n)=='1'){
+                sum=sum+value[n];
+            }
+        }
+        
+        return sum;
+    }
+     public static String toHex(int decimal) {
+        if (decimal == 0) {
+            return "0";  
+        }
+
+        String hexDigits = ""; 
+      
+
+        while (decimal > 0) {
+            int remainder = decimal % 16; 
+            if (remainder < 10) {
+                hexDigits =hexDigits+ (char) ('0' + remainder); 
+            } else {
+                hexDigits=hexDigits+ (char)('A' + (remainder - 10)); 
+            }
+            decimal = decimal / 16;  
+         
+        }
+    
+    return hexDigits;
+
+}
+
+
+
+
+}
+
+//Task-7
+

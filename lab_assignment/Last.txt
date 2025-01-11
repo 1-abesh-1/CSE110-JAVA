@@ -101,7 +101,6 @@ System.out.println(valid);
 //Task-4
 
 
-
  class Main{
     public static void main(String[]args){
 
@@ -114,8 +113,14 @@ System.out.print(isHappyNumber(82));
         if(a>10){
             
             
-            while (b>10){
-                b=(b/10)*(b/10)+(b%10)*(b%10);
+            while (b>9){
+                int sum =0;
+                while(b>0){
+                     
+              sum=sum+(b%10)*(b%10);
+             b=b/10;
+                }
+             b=sum;
             }
             if(b==1){
                 flag=true;
@@ -126,3 +131,6 @@ System.out.print(isHappyNumber(82));
         return flag;
     }
 }
+
+//Task-5
+

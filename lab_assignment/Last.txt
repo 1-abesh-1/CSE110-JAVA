@@ -1,0 +1,128 @@
+//Task--2
+
+class Main {
+    public static void main(String[] args) {
+        modify("baddadda", "dd", "n");
+    }
+
+    public static void modify(String a, String b, String c) {
+        String m = "";
+        boolean flag = false;
+        int i = 0;
+        int i1 = 0;
+
+        while (i < a.length()) {
+            // Check if there are enough characters left in 'a' for a potential match
+            if (a.length() - i >= b.length()) {
+                // Compare 'b' with the substring starting at the current position
+                while (i1 < b.length()) {
+                    if (a.charAt(i + i1) == b.charAt(i1)) {
+                        flag = true;
+                    } else {
+                        flag = false;
+                        break;
+                    }
+                    i1++;
+                }
+
+                if (flag) {
+                    m = m + c; // Add replacement string
+                    i = i + b.length(); // Skip the length of 'b'
+                    i1 = 0; // Reset inner index
+                } else {
+                    m = m + a.charAt(i); // Add current character
+                    i++;
+                    i1 = 0; // Reset inner index
+                }
+            } else {
+                // Not enough characters left for a match, add remaining characters
+                m = m + a.charAt(i);
+                i++;
+            }
+        }
+
+        System.out.print(m);
+    }
+}
+
+
+//Task--3
+
+
+
+class Main{
+    public static void main(String[]args){
+        int valid=0;
+String []email_list ={"cse110@gmail.com", "government@cv.", 
+"eee@.ac.bd"};
+for(int i=0;i<email_list.length;i++){
+    String mail=email_list[i];
+    boolean f_con=false;
+    boolean s_con=false;
+    boolean t_con=false;
+    boolean l_con=false;
+    for(int n=0;n<mail.length();n++){
+        if(mail.charAt(n)=='@'){
+            f_con=true;
+char k=mail.charAt(n+1);
+            if('A'<k&&k<'z'){
+                s_con=true;
+            }
+        }
+        else if(mail.charAt(n)=='.'){
+            l_con=true;
+
+            if(n!=mail.length()-1){
+                t_con=true;
+            }
+        }
+        
+    }
+    
+    if(!('A'<mail.charAt(0) &&mail.charAt(0)<'z')){
+        t_con=false;
+    }
+    if(f_con && s_con && t_con && l_con){
+        valid=valid+1;
+    }
+    
+    
+    
+    
+    
+}
+System.out.println(valid);
+
+
+    }
+}
+
+
+//Task-4
+
+
+
+ class Main{
+    public static void main(String[]args){
+
+System.out.print(isHappyNumber(82));
+
+    }
+    public static boolean isHappyNumber(int a){
+        boolean flag=false;
+        int b=a;
+        if(a>10){
+            
+            
+            while (b>10){
+                b=(b/10)*(b/10)+(b%10)*(b%10);
+            }
+            if(b==1){
+                flag=true;
+            }
+            
+        }
+ 
+        return flag;
+    }
+}
